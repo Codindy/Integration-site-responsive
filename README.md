@@ -1,7 +1,7 @@
 # Intégration site 
 ## Pojet web & go Epitech 2022
 
-Framework css : Tailwind
+Framework css use : Tailwind
 
 ## Subject
 
