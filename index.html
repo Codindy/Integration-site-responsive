@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Safy, Move safer, move Safy">
+  <title>Safy</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="bgcolor1">
+      <div class="flex container mx-auto lg:px-32 md:px-12 sm:px-16">
+        <a href="#" class="mr-2 mt-6 mb-6"><img src="assets\20.png" alt="Facebook logo"></a>
+        <a href="#" class="mt-6 mb-6"><img src="assets\19.png" alt="Twitter logo"></a>
+      </div>
+    </div>
+    <!-- NAVIGATION -->
+    <nav class="navbar bgcolor2 py-5">
+      <div
+        class="container mx-auto lg:px-32 md:px-12 sm:px-16 flex lg:flex-row md:flex-col sm:flex-col sm:justify-between">
+        <div class="flex lg:justify-start md:justify-start sm:justify-center">
+          <a href="#"><img src="assets\18.png" alt="Safy logo"
+              class="md:px-4 md:w-full lg:w-full sm:w-96 sm:py-4 sm:justify-center"></a>
+        </div>
+        <div
+          class="flex lg:flex-row md:flex-row sm:flex-col lg:items-center lg:justify-start md:self-start lg:self-center">
+          <a href="#"
+            class="lg:border-0 md:border-0 sm:px-4 lg:pr-4 md:pl-0 py-2 sm:border-t-2 border-neutral-300 sm:w-full sm:flex">Home</a>
+          <div
+            class="sm:flex sm:items-center sm:justify-between lg:border-0 md:border-0 sm:border-t-2 border-neutral-300 sm:w-full px-4 py-2 dropdown relative">
+            <a href="#" class="sm:flex dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+              aria-expanded="false">Book</a>
+            <img src="assets\3.png" alt="down" class="fleche mx-2 lg:visible md:visible sm:invisible">
+            <img src="assets\4.png" alt="down" class="fleche mx-2 lg:invisible md:invisible sm:visible">
+          </div>
+          <div x-data="{ dropdownOpen: false }"
+            class="sm:flex sm:items-center sm:justify-between lg:border-0 md:border-0 sm:border-t-2 border-neutral-300 sm:w-full px-4 py-2 relative">
+            <a href="#" class="sm:flex" @click="dropdownOpen = !dropdownOpen">Destinations</a>
+            <img src="assets\3.png" alt="down" class="fleche mx-2 lg:visible md:visible sm:invisible">
+            <img src="assets\4.png" alt="down" class="fleche mx-2 lg:invisible md:invisible sm:visible">
+            <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed m-12 inset-0 h-full w-full z-10">
+            </div>
+            <div x-show="dropdownOpen"
+              class="lg:absolute md:absolute sm:absolute sm:top-10 left-0 lg:ml-4 md:ml-4 sm:ml-0 lg:w-28 md:w-28 sm:w-full bg-white z-20 md:drop-shadow-lg">
+              <a href="#"
+                class="block px-4 py-2 text-sm text-black bg-gray-300 border-b-2 border-black hover:bg-white hover:text-red-500">
+                France
+              </a>
+              <a href="#"
+                class="block px-4 py-2 text-sm text-black bg-gray-300 border-b-2 border-black hover:bg-white hover:text-red-500">
+                Brazil
+              </a>
+              <a href="#"
+                class="block px-4 py-2 text-sm text-black bg-gray-300 border-b-2 border-black hover:bg-white hover:text-red-500">
+                Algeria
+              </a>
+            </div>
+          </div>
+          <a href="#"
+            class="lg:border-0 md:border-0 px-4 py-2 sm:border-t-2 border-neutral-300 sm:w-full sm:flex">Prices</a>
+          <a href="#"
+            class="lg:border-0 md:border-0 px-4 py-2 sm:border-t-2 border-neutral-300 sm:w-full sm:flex">Alerts</a>
+          <a href="#"
+            class="lg:border-0 md:border-0 px-4 py-2 lg:pr-0 sm:border-t-2 border-neutral-300 sm:w-full sm:flex">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- 1ère section carousel -->
+  <section class="bgcolor1">
+    <div>
+      <div id="carouselExampleCaptions" id=""
+        class="container mx-auto lg:px-32 md:px-12 sm:px-16 carousel slide relative" data-bs-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide relative" data-bs-ride="carousel">
+          <div class="carousel-inner relative w-full overflow-hidden">
+            <div class="carousel-item active relative float-left w-full">
+              <img src="assets\6.jpg" class="block w-full"
+                alt="A woman in an airport waiting while watching a plane take off" />
+              <div class="carousel-caption hidden md:block absolute left-0 right-0 bottom-0 bg-black/30">
+                <h5 class="text-xl ml-6">Tips to travel around the world !</h5>
+              </div>
+            </div>
+            <div class="carousel-item relative float-left w-full">
+              <img src="assets\7.jpg" class="block w-full"
+                alt="An happy woman walking on a sunny road surrounded by fields, alone with a suitcase in her hand" />
+              <div class="carousel-caption hidden md:block absolute left-0 right-0 bottom-0 bg-black/30">
+                <h5 class="text-xl ml-6">Tips to travel around the world !</h5>
+              </div>
+            </div>
+            <div class="carousel-item relative float-left w-full">
+              <img src="assets\8.jpg" class="block w-full" alt="A man climbing, hanging in the void" />
+              <div class="carousel-caption hidden md:block absolute left-0 right-0 bottom-0 bg-black/30">
+                <h5 class="text-xl ml-6">Tips to travel around the world !</h5>
+              </div>
+            </div>
+            <div class="carousel-item relative float-left w-full">
+              <img src="assets\9.jpg" class="block w-full" alt="A woman photographing something in the sky" />
+              <div class="carousel-caption hidden md:block absolute left-0 right-0 bottom-0 bg-black/30">
+                <h5 class="text-xl ml-6">Tips to travel around the world !</h5>
+              </div>
+            </div>
+            <div class="carousel-item relative float-left w-full">
+              <img src="assets\10.jpg" class="block w-full" alt="african people" />
+              <div class="carousel-caption hidden md:block absolute left-0 right-0 bottom-0 bg-black/30">
+                <h5 class="text-xl ml-6">Tips to travel around the world !</h5>
+              </div>
+            </div>
+            <div class="carousel-item relative float-left w-full">
+              <img src="assets\11.jpg" class="block w-full" alt="Surfer underwater" />
+              <div class="carousel-caption hidden md:block absolute left-0 right-0 bottom-0 bg-black/30">
+                <h5 class="text-xl ml-6">Tips to travel around the world !</h5>
+              </div>
+            </div>
+          </div>
+          <!-- bouton previous et next -->
+          <button
+            class="absolute top-10 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline lg:left-0 md:left-0 sm:left-0"
+            type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="inline-block bg-no-repeat" aria-hidden="true"><img src="assets\2a.png" alt="previous"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="absolute top-10 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline lg:right-0 md:right-0 sm:right-0"
+            type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="inline-block bg-no-repeat" aria-hidden="true"><img src="assets\2b.png" alt="next"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- bouton slide -->
+        <div class="flex justify-center mt-16 py-1">
+          <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+              aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+              aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+              aria-label="Slide 6"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 2ème section: les articles -->
+  <section>
+    <div
+      class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-6 container mx-auto lg:px-32 md:px-12 sm:px-16">
+      <!--Card 1-->
+      <article class="overflow-hidden">
+        <div>
+          <div>
+            <div class='top-card relative p-4 flex'>
+              <div class='flex-no-shrink'>
+                <img alt='fire logo' class='w-full' src='assets\13.png'>
+              </div>
+              <div class='flex-1 card-block relative'>
+                <div class="ml-4">
+                  <h4 class='font-medium lg:text-2xl md:text-sm mb-3 text-white'>Safe, structured and amazing application</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pt-4">
+          <p class="text-black text-base lg:text-sm md:text-xs sm:text-xs">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac porttitor ipsum. Aliquam semper ac sapien
+            at dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras
+            convallis erat sapien. Quisque porttitor ut quam a lobortis.
+          </p>
+        </div>
+        <div>
+          <a href="#" class="inline-block font-medium text-red-400 mr-2 mb-2 lg:text-sm md:text-xs sm:text-xs">more info</a>
+        </div>
+      </article>
+      <!--Card 2-->
+      <article class="overflow-hidden">
+        <div>
+          <div>
+            <div class='top-card relative p-4 flex'>
+              <div class='flex-no-shrink'>
+                <img alt='tent fabric logo' class='block mx-auto' src='assets\17.png'>
+              </div>
+              <div class='flex-1 card-block relative'>
+                <div class="ml-4">
+                  <h4 class='font-medium lg:text-2xl md:text-sm mb-3 text-white'>The sun is shining today, book your trip</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pt-4">
+          <p class="text-black text-base lg:text-sm md:text-xs sm:text-xs">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac porttitor ipsum. Aliquam semper ac sapien
+            at dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras
+            convallis erat sapien. Quisque porttitor ut quam a lobortis.
+          </p>
+        </div>
+        <div>
+          <a href="#" class="inline-block font-medium text-red-400 mr-2 mb-2 lg:text-sm md:text-xs sm:text-xs">more info</a>
+        </div>
+      </article>
+      <!--Card 3-->
+      <article class="overflow-hidden">
+        <div>
+          <div>
+            <div class='top-card relative p-4 flex'>
+              <div class='flex-no-shrink'>
+                <img alt='bear paws' class='block mx-auto' src='assets\12.png'>
+              </div>
+              <div class='flex-1 card-block relative'>
+                <div class="ml-4">
+                  <h4 class='font-medium lg:text-2xl md:text-sm text-white'>Meet new people and live more intensely</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pt-4">
+          <p class="text-black text-base lg:text-sm md:text-xs sm:text-xs">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac porttitor ipsum. Aliquam semper ac sapien
+            at dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras
+            convallis erat sapien. Quisque porttitor ut quam a lobortis.
+          </p>
+        </div>
+        <div>
+          <a href="#" class="inline-block font-medium text-red-400 mr-2 mb-2 lg:text-sm md:text-xs sm:text-xs">more info</a>
+        </div>
+    </div>
+    </article>
+    <div class="container mx-auto lg:px-32 md:px-12 sm:px-16">
+      <h1 class="font-bold text-2xl mb-3 text-black">Destinations</h1>
+      <hr class="text-neutral-300">
+    </div>
+    <div
+      class="p-10 mb-8 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-6 container mx-auto lg:px-32 md:px-12 sm:px-16">
+      <div class="relative flex sm:flex-col">
+        <img class="w-full p-2 rounded border-2 border-neutral-300" src="assets\3.jpg" alt="product" />
+        <div class="py-4">
+          <h4 class="mb-3 text-xl font-semibold tracking-tight text-gray-800">France</h4>
+        </div>
+      </div>
+      <div class="relative flex sm:flex-col lg:flex md:flex sm:hidden">
+        <img class="w-full p-2 rounded border-2 border-neutral-300" src="assets\4.jpg" alt="product" />
+        <div class="py-4">
+          <h4 class="mb-3 text-xl font-semibold tracking-tight text-gray-800">Brazil</h4>
+        </div>
+      </div>
+      <div class="relative flex sm:flex-col lg:flex md:flex sm:hidden">
+        <img class="w-full p-2 rounded border-2 border-neutral-300" src="assets\5.jpg" alt="product" />
+        <div class="py-4">
+          <h4 class="mb-3 text-xl font-semibold tracking-tight text-gray-800">Algeria</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 3ème section -->
+  <section class="bgcolor1">
+    <div
+      class="pt-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6 container mx-auto lg:px-32 md:px-12 sm:px-16">
+      <article class="flex flex-col">
+        <h1 class="font-bold text-2xl mb-2 text-gray-600">About Us</h1>
+        <hr class="text-neutral-300 my-4">
+        <p class="py-6 lg:text-sm md:text-xs sm:text-xs text-gray-600">Lorem ipsum dolor sit, amet consectetur
+          adipisicing elit. Deserunt voluptatum numquam tempora aperiam? Cum mollitia, illo earum minima porro quod quae
+          similique voluptas error odio, molestias fuga? Optio enim eaque adipisci voluptatum dolore provident
+          perspiciatis, qui dolores. Nulla possimus, quod odit totam recusandae ab fuga ratione accusantium reiciendis
+          laudantium facere ex, nobis consectetur beatae aspernatur!</p>
+        <p class="py-2 lg:text-sm md:text-xs sm:text-xs text-gray-600">Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Molestias fugit reprehenderit magnam libero, vitae esse eum nulla minima blanditiis neque,
+          distinctio odio magni earum sint. Possimus voluptatum maiores quasi cumque aut sequi quisquam explicabo
+          laboriosam distinctio fugit sint veniam ex eaque, praesentium sed dolores. Fugit sequi error voluptatum
+          debitis minus. Debitis tempora in nostrum maxime explicabo. Atque quisquam suscipit natus ad cum minus eveniet
+          vero?</p>
+      </article>
+      <article class="flex flex-col">
+        <h1 class="font-bold text-2xl mb-2 text-gray-600">Why Us</h1>
+        <hr class="text-neutral-300 my-4">
+        <div class="flex flex-col">
+          <div class='relative p-4 flex'>
+            <div class='flex-no-shrink'>
+              <img alt='tent fabric logo' class='block mx-auto' src='assets\14.png'>
+            </div>
+            <div class='flex-1 card-block relative'>
+              <div class="ml-4">
+                <p class='lg:text-sm md:text-xs sm:text-xs mb-3 text-gray-600'>Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Asperiores facere consequuntur odio, minus voluptatem accusantium odit aliquam
+                  quaerat numquam ad.</p>
+              </div>
+            </div>
+          </div>
+          <div class='relative p-4 flex'>
+            <div class='flex-no-shrink'>
+              <img alt='tent fabric logo' class='block mx-auto' src='assets\15.png'>
+            </div>
+            <div class='flex-1 card-block relative'>
+              <div class="ml-4">
+                <p class='lg:text-sm md:text-xs mb-3 sm:text-xs text-gray-600'>Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Asperiores facere consequuntur odio, minus voluptatem accusantium odit aliquam
+                  quaerat numquam ad.</p>
+              </div>
+            </div>
+          </div>
+          <div class='relative p-4 flex'>
+            <div class='flex-no-shrink'>
+              <img alt='tent fabric logo' class='block mx-auto' src='assets\16.png'>
+            </div>
+            <div class='flex-1 card-block relative'>
+              <div class="ml-4">
+                <p class='lg:text-sm md:text-xs sm:text-xs mb-3 text-gray-600'>Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Asperiores facere consequuntur odio, minus voluptatem accusantium odit aliquam
+                  quaerat numquam ad.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <article class="flex flex-col container mx-auto lg:px-32 md:px-12 sm:px-16">
+      <h1 class="font-bold text-2xl text-gray-600">How to travel</h1>
+      <hr class="text-neutral-300 my-4">
+      <p class="text-gray-600 lg:text-sm md:text-xs sm:text-xs">Lorem, ipsum dolor sit amet consectetur adipisicing
+        elit. Sunt iusto dolor quia vitae animi ullam incidunt praesentium enim optio? Incidunt voluptate totam eveniet
+        sunt rem?</p>
+      <button
+        class="mt-4 mb-24 w-32 bg-lime-600 hover:bg-lime-700 text-white text-lg font-semi-bold py-2 px-4 rounded border border-black">Subscribe</button>
+    </article>
+  </section>
+  <!-- footer -->
+  <footer class="bgcolor2">
+    <nav class="container mx-auto lg:px-32 md:px-12 sm:px-16 ">
+      <div class="flex lg:flex-row md:flex-row sm:flex-wrap items-center py-8">
+        <a href="#" class="font-bold pr-12">Home</a>
+        <a href="#" class="font-bold pr-12">Book</a>
+        <a href="#" class="font-bold pr-12">Destinations</a>
+        <a href="#" class="font-bold pr-12">Prices</a>
+        <a href="#" class="font-bold pr-12">Alerts</a>
+        <a href="#" class="font-bold pr-12">Contact</a>
+      </div>
+    </nav>
+    <p class="container mx-auto lg:px-32 sm:px-16 md:px-12 pb-16 text-yellow-900 text-sm">© There is no birds here Look around.</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+</body>
+
+</html>
